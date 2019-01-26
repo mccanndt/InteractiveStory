@@ -1,0 +1,10 @@
+disabled_rules:
+  - line_length
+included:
+  - Source
+  - Tests
+  - UITests
+excluded:
+  - Carthage
+  - Pods
+  - Source/R.generated.swift

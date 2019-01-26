@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1r3-58-Ia5">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InteractiveStory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beginning" translatesAutoresizingMaskIntoConstraints="NO" id="C1F-EW-YEH">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9EX-xR-2P5">
+                                <rect key="frame" x="135.5" y="784" width="143" height="30"/>
+                                <state key="normal" title="Start Your Adventure"/>
+                                <connections>
+                                    <segue destination="Ydi-2a-I91" kind="show" identifier="startAdventure" id="0v6-Rh-gxR"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lyx-22-nlV">
+                                <rect key="frame" x="24" y="714" width="366" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="OOa-g3-BSy"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lyx-22-nlV" secondAttribute="trailing" constant="24" id="2b4-FO-xQO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="C1F-EW-YEH" secondAttribute="bottom" id="9q3-cN-b2f"/>
+                            <constraint firstItem="9EX-xR-2P5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RGZ-iq-a2M"/>
+                            <constraint firstItem="C1F-EW-YEH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="S7y-oT-5pz"/>
+                            <constraint firstItem="lyx-22-nlV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tuv-Ih-bZ0"/>
+                            <constraint firstItem="9EX-xR-2P5" firstAttribute="top" secondItem="lyx-22-nlV" secondAttribute="bottom" constant="40" id="bq1-PJ-xuk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9EX-xR-2P5" secondAttribute="bottom" constant="48" id="kHA-bG-MTG"/>
+                            <constraint firstItem="lyx-22-nlV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="nmK-5S-0PB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C1F-EW-YEH" secondAttribute="trailing" id="tPu-2K-tOy"/>
+                            <constraint firstItem="C1F-EW-YEH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ws6-ET-MnF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WJB-cZ-VOj"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="lyx-22-nlV" id="Fxi-ip-DsD"/>
+                        <outlet property="textFieldBottomConstraint" destination="bq1-PJ-xuk" id="32r-dK-oqY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="919" y="-564"/>
+        </scene>
+        <!--Page Controller-->
+        <scene sceneID="nVh-o7-UH3">
+            <objects>
+                <viewController id="Ydi-2a-I91" customClass="PageController" customModule="InteractiveStory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K0M-Vu-Xey">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hRd-MR-2Qz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qnc-hB-j1p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1671" y="-564"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uyP-hJ-RDx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1r3-58-Ia5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="z3p-1U-bAt">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="iRi-Gj-ngG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TmS-0h-irR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="-564.46776611694156"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Beginning" width="320" height="568"/>
+    </resources>
+</document>
