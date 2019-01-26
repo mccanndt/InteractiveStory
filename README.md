@@ -1,6 +1,6 @@
 # InteractiveStory
 
-Short description of the project
+Interactive Story app following Treehouse course "Build an Interactive Story App with Swift" using Carbon-iOS project template from Atomic Robot 
 
 # Getting Started
 
